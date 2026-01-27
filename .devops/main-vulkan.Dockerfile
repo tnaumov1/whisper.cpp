@@ -28,7 +28,7 @@ RUN apt-get update \
     && apt-get install -y libgomp1 libvulkan1 mesa-vulkan-drivers \
     libglvnd0 libgl1 libglx0 libegl1 libgles2 curl ffmpeg wget
 
-COPY .. /app
+COPY --from=build /app /app
 
 ENV PATH=/app/build/bin:$PATH
 ENTRYPOINT [ "bash", "-c" ]
