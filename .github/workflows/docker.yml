@@ -18,11 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - { tag: "main", dockerfile: ".devops/main.Dockerfile", platform: "linux/amd64" }
-          - { tag: "main-musa", dockerfile: ".devops/main-musa.Dockerfile", platform: "linux/amd64" }
-          - { tag: "main-intel", dockerfile: ".devops/main-intel.Dockerfile", platform: "linux/amd64" }
-          - { tag: "main-cuda", dockerfile: ".devops/main-cuda.Dockerfile", platform: "linux/amd64" }
-          - { tag: "main-vulkan", dockerfile: ".devops/main-vulkan.Dockerfile", platform: "linux/amd64" }
+          - { tag: "main-cuda12", dockerfile: ".devops/main-cuda12.Dockerfile", platform: "linux/amd64" }
 
     steps:
       - name: Check out the repo
