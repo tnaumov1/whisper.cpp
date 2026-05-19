@@ -19,9 +19,7 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
-# Ref: https://stackoverflow.com/a/53464012
-ENV CUDA_MAIN_VERSION=12.8.1
-ENV LD_LIBRARY_PATH /usr/local/cuda-${CUDA_MAIN_VERSION}/compat:$LD_LIBRARY_PATH
+ENV CUDA_MAIN_VERSION=12.8
 
 COPY .. .
 # Enable cuBLAS
